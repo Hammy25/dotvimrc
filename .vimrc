@@ -16,6 +16,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 "From http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
+Plugin 'java_getset.vim'
 "all plugins come before this
 call vundle#end()
 filetype plugin indent on
@@ -48,3 +49,4 @@ set cursorline
 set showmode
 "highlight while typing search characters
 set incsearch
+

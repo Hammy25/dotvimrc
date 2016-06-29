@@ -1,7 +1,13 @@
 set nocompatible 
 filetype off
+"mapleader setting
+let mapleader = ","
+"mapping to open vimrc and edit with ,ev(edit vimrc)
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"mapping 'source vimrc file' to ,sv(source vimrc file)
+nnoremap <leader>sv :source $MYVIMRC<cr>
 "set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/_vim/bundle/Vundle.vim
 call vundle#begin()
 "alternatively vundle#begin(~/some/path/here)
 "let vundle manage vundle
@@ -22,7 +28,7 @@ call vundle#end()
 filetype plugin indent on
 "To ignore plugin indent changes, instead use:
 "filetype plugin on
-set number 
+set number numberwidth=5 
 set syntax=on
 "To enable use of solarized color scheme(Dark Theme)
 syntax enable
@@ -49,4 +55,23 @@ set cursorline
 set showmode
 "highlight while typing search characters
 set incsearch
+"set matchtime 
+set matchtime=3
+"mapping ddp to -
+nnoremap - ddp
+"mappping making a word capital to <c-u>
+inoremap <c-u> <esc>viw<S-u><esc>i<end>
+"mapping my brackets to be one touch input
+"and mapping 9 and 0 to be <shift-?>
+inoremap 9 (
+inoremap 0 )
+inoremap ( 9
+inoremap ) 0
+"mapping curly braces and square brackets in insert mode
+inoremap { [
+inoremap [ {
+inoremap ] }
+inoremap } ]
+"ANCI cat
+echo '(>^.^<)'
 

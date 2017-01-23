@@ -11,7 +11,6 @@ set mouse=a
 "Highlight Search
 set hlsearch
 "Highlight current line
-set cursorline
 "show filename in title bar
 set showmode
 "highlight while typing search characters
@@ -23,7 +22,7 @@ set foldlevelstart=0
 " }}}
 " Vundle settings and plugins-related settings ---------- {{{
 "set the runtime path to include Vundle and initialize
-set rtp+=~/_vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "alternatively vundle#begin(~/some/path/here)
 "let vundle manage vundle
@@ -71,10 +70,10 @@ nnoremap <leader>w :write<cr>
 inoremap <c-u> <esc>viw<S-u><esc>i<end>
 "mapping my brackets to be one touch input
 "and mapping 9 and 0 to be <shift-?>
-inoremap 9 (
-inoremap 0 )
-inoremap ( 9
-inoremap ) 0
+"inoremap 9 (
+"inoremap 0 )
+"inoremap ( 9
+"inoremap ) 0
 "mapping curly braces and square brackets in insert mode
 inoremap { [
 inoremap [ {
@@ -108,10 +107,10 @@ set statusline+=%l "current line
 set statusline+=/  "separator
 set statusline+=%L "Total lines
 " }}}
-"Vimscript file settings ---------------------- {{{
+"Vim settings -------------------------- {{{
 "Vim to use marker method of folding any Vimscript files.
 augroup filetype_vim
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
-" }}}
+"}}}
